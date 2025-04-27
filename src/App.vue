@@ -4,7 +4,7 @@
       <ion-menu content-id="main-content" type="overlay">
         <ion-content>
           <div class="menu-header">
-            <div class="logo">ELEGABAT Analytics</div>
+            <div class="logo">ELEGABAT</div>
             <div class="subtitle">Plataforma de Inteligencia de Apuestas</div>
           </div>
           

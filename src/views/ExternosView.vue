@@ -18,7 +18,7 @@
       <!-- Encabezado del Dashboard -->
       <div class="dashboard-header">
         <div class="header-text">
-          <h1>ELEGABAT Analytics</h1>
+          <h1>ELEGABAT Analytics Externos</h1>
           <p class="subtitle">Análisis de apuestas, usuarios y rendimiento</p>
         </div>
         <div class="header-actions">
