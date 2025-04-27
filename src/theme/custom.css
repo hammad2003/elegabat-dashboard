@@ -1,0 +1,408 @@
+:root {
+  /* Colores principales */
+  --ion-color-primary: #990000;
+  --ion-color-primary-rgb: 153,0,0;
+  --ion-color-primary-contrast: #ffffff;
+  --ion-color-primary-contrast-rgb: 255,255,255;
+  --ion-color-primary-shade: #870000;
+  --ion-color-primary-tint: #a31a1a;
+  
+  --ion-color-secondary: #6610f2;
+  --ion-color-secondary-rgb: 102,16,242;
+  --ion-color-secondary-contrast: #ffffff;
+  --ion-color-secondary-contrast-rgb: 255,255,255;
+  --ion-color-secondary-shade: #5a0ed5;
+  --ion-color-secondary-tint: #7528f3;
+  
+  --ion-color-tertiary: #28a745;
+  --ion-color-tertiary-rgb: 40,167,69;
+  --ion-color-tertiary-contrast: #ffffff;
+  --ion-color-tertiary-contrast-rgb: 255,255,255;
+  --ion-color-tertiary-shade: #23933d;
+  --ion-color-tertiary-tint: #3eb058;
+  
+  --ion-color-danger: #dc3545;
+  --ion-color-danger-rgb: 220,53,69;
+  --ion-color-danger-contrast: #ffffff;
+  --ion-color-danger-contrast-rgb: 255,255,255;
+  --ion-color-danger-shade: #c22f3d;
+  --ion-color-danger-tint: #e04958;
+  
+  --ion-color-dark: #2c3e50;
+  --ion-color-dark-rgb: 44,62,80;
+  --ion-color-dark-contrast: #ffffff;
+  --ion-color-dark-contrast-rgb: 255,255,255;
+  --ion-color-dark-shade: #273748;
+  --ion-color-dark-tint: #415162;
+  
+  --ion-color-medium: #7f8c8d;
+  --ion-color-medium-rgb: 127,140,141;
+  --ion-color-medium-contrast: #ffffff;
+  --ion-color-medium-contrast-rgb: 255,255,255;
+  --ion-color-medium-shade: #707b7c;
+  --ion-color-medium-tint: #8c9899;
+  
+  --ion-color-light: #f5f7fa;
+  --ion-color-light-rgb: 245,247,250;
+  --ion-color-light-contrast: #000000;
+  --ion-color-light-contrast-rgb: 0,0,0;
+  --ion-color-light-shade: #d7d9dc;
+  --ion-color-light-tint: #f6f8fb;
+  
+  /* Variables personalizadas */
+  --elegabat-accent: #ffcc00;
+  --elegabat-bg: #f5f7fa;
+  --elegabat-card-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Estructura base */
+body {
+  background-color: var(--ion-color-light);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Contenedor principal */
+.dashboard-content {
+  background-color: var(--ion-color-light);
+  color: var(--ion-color-dark);
+}
+
+/* Encabezado del dashboard */
+.dashboard-header {
+  background-color: white;
+  color: var(--ion-color-primary);
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.dashboard-header h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-transform: none;
+  letter-spacing: 0.5px;
+}
+
+.dashboard-header .subtitle {
+  font-size: 0.9rem;
+  opacity: 0.8;
+  margin-top: 4px;
+  color: var(--ion-color-medium);
+}
+
+/* Grid principal */
+.dashboard-grid {
+  padding: 16px;
+}
+
+/* Tarjetas de gráficos */
+.chart-card {
+  background-color: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--elegabat-card-shadow);
+  margin-bottom: 16px;
+  height: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.chart-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.chart-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 16px;
+  background-color: var(--ion-color-primary);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.chart-title .badge {
+  background-color: var(--elegabat-accent);
+  color: var(--ion-color-dark);
+  font-size: 0.7rem;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.chart-content {
+  padding: 16px;
+  position: relative;
+  min-height: 300px;
+  background-color: white;
+  color: var(--ion-color-dark);
+}
+
+/* KPIs */
+.kpi-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.kpi-card {
+  background-color: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: var(--elegabat-card-shadow);
+  transition: transform 0.3s ease;
+}
+
+.kpi-card:hover {
+  transform: translateY(-4px);
+}
+
+.kpi-card .icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+  background-color: rgba(var(--ion-color-primary-rgb), 0.1);
+}
+
+.kpi-card .icon ion-icon {
+  font-size: 24px;
+  color: var(--ion-color-primary);
+}
+
+.kpi-card .value {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--ion-color-primary);
+  margin-bottom: 4px;
+}
+
+.kpi-card .label {
+  font-size: 0.9rem;
+  color: var(--ion-color-medium);
+  margin-bottom: 8px;
+}
+
+.kpi-card .trend {
+  display: flex;
+  align-items: center;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.kpi-card .trend ion-icon {
+  margin-right: 4px;
+  font-size: 1rem;
+}
+
+.kpi-card .trend.up {
+  color: var(--ion-color-tertiary);
+}
+
+.kpi-card .trend.down {
+  color: var(--ion-color-danger);
+}
+
+/* Tablas */
+.performance-table {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.performance-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.performance-table th {
+  background-color: var(--ion-color-primary);
+  padding: 12px 16px;
+  text-align: left;
+  font-size: 0.8rem;
+  color: white;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.performance-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--ion-color-light);
+  font-size: 0.9rem;
+  color: var(--ion-color-dark);
+}
+
+.performance-table tr:hover {
+  background-color: rgba(var(--ion-color-primary-rgb), 0.05);
+}
+
+.bar-cell {
+  width: 30%;
+  min-width: 150px;
+}
+
+.bar-container {
+  display: flex;
+  align-items: center;
+}
+
+.bar {
+  height: 8px;
+  border-radius: 4px;
+  background-color: var(--ion-color-primary);
+  margin-right: 8px;
+  transition: width 0.5s ease;
+}
+
+.bar-value {
+  font-size: 0.8rem;
+  color: var(--ion-color-medium);
+}
+
+/* Badges */
+.real-time-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: var(--ion-color-secondary);
+  color: white;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  text-transform: uppercase;
+}
+
+.real-time-badge::before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background-color: var(--ion-color-tertiary);
+  border-radius: 50%;
+  animation: pulse 1.5s infinite;
+}
+
+.chart-type-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: rgba(var(--ion-color-dark-rgb), 0.7);
+  color: white;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  z-index: 10;
+  text-transform: uppercase;
+}
+
+/* Animaciones */
+@keyframes pulse {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(var(--ion-color-tertiary-rgb), 0.7);
+  }
+  
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 6px rgba(var(--ion-color-tertiary-rgb), 0);
+  }
+  
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(var(--ion-color-tertiary-rgb), 0);
+  }
+}
+
+/* Gráficos */
+.chart {
+  width: 100%;
+  height: 300px;
+}
+
+.map-chart {
+  height: 300px !important;
+  width: 100% !important;
+}
+
+/* Tooltips */
+.custom-tooltip {
+  background-color: rgba(var(--ion-color-dark-rgb), 0.9);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Asegurar que los gráficos sean visibles */
+.echarts,
+.apexcharts-canvas,
+.chart-content canvas,
+.chart-content svg {
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 300px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .kpi-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .dashboard-header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 12px 16px;
+  }
+  
+  .dashboard-header h1 {
+    font-size: 1.4rem;
+    margin-bottom: 4px;
+  }
+  
+  .chart-content {
+    padding: 12px;
+  }
+  
+  .performance-table th,
+  .performance-table td {
+    padding: 8px 12px;
+  }
+}
+
+/* Componentes Ionic personalizados */
+ion-toolbar {
+  --background: var(--ion-color-primary);
+  --color: white;
+}
+
+ion-content {
+  --background: var(--ion-color-light);
+}
+
+ion-button {
+  --background: var(--ion-color-primary);
+  --color: white;
+  --border-radius: 8px;
+  font-weight: 500;
+}
+
+ion-button:hover {
+  --background: var(--ion-color-primary-shade);
+}
